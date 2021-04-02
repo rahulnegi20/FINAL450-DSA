@@ -1,0 +1,18 @@
+# Approach 1 using slices Execution time : 1.60
+def rotate(n, d, arr):
+    
+    new = arr[d:] + arr[:d]
+    for i in range(n):
+        print(new[i], end=' ')
+    print()   
+    return 
+
+test_case = int(input())
+while test_case >0 :
+        
+    n, d = map(int, input().strip().split(' '))
+    arr = list(map(int, input().strip().split(' ')))
+    
+    ans = rotate(n, d, arr)
+
+    test_case -= 1

@@ -1,4 +1,4 @@
-# Approach 1 using slices Execution time : 1.60
+# Approach 1 using slices # Execution time : 1.60
 def rotate(n, d, arr):
     
     new = arr[d:] + arr[:d]
@@ -16,3 +16,20 @@ while test_case >0 :
     ans = rotate(n, d, arr)
 
     test_case -= 1
+
+# Approach : 2. Pretty much doing same thing but without slices # Execution time : 1.55
+def rotate(n, d, arr):
+    
+    temp = []
+    
+    for i in range(d, n):
+        temp.append(arr[i])
+        
+    for i  in range(0, d):
+        temp.append(arr[i])
+    
+    for i in temp:
+        print(i, end=' ')
+    print()   
+    return 
+

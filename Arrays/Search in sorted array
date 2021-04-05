@@ -1,0 +1,21 @@
+# simple Approach
+
+def search(A : list, l : int, h : int, key : int):
+    # Complete this function
+    temp = -1
+    for i in range(0, h+1):
+        if A[i] == key:          
+            temp = i
+            break
+    return temp
+
+
+if __name__ == '__main__':
+    t = int(input())
+    
+    for _ in range(t):
+        n = int(input())
+        A = [int(x) for x in input().split()]
+        k = int(input())
+        
+        print(search(A, 0, n - 1, k))

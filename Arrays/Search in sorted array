@@ -1,4 +1,4 @@
-# simple Approach
+# simple Approach : - Binary Search
 
 def search(A : list, l : int, h : int, key : int):
     # Complete this function

@@ -1,0 +1,10 @@
+# in-place means that the algorithm does not use extra space for manipulating the input but may require a small though nonconstant extra space for its operation.(wikipedia)
+
+# This is the Pythonic way to do this 
+
+
+class Solution:
+    def leftRotate(self, arr, n, d):
+        arr[:] = arr[d:] + arr[:d]      # arr[:] is new array now! 
+        return arr
+        

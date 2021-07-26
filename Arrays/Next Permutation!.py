@@ -7,7 +7,7 @@ class Solution:
         first_index = -1
         second_index = -1
         
-        # finding any ascending number(sequence)
+        # finding last ascending number(sequence)
         for i in range(len(nums)-1):
           if nums[i] < nums[i+1]:
             first_index = i
@@ -17,7 +17,7 @@ class Solution:
           nums.reverse()
           return
         
-        # swaping first_index with greater number 
+        # finding greater than first_index
         for i in range(first_index+1, len(nums)):
           if nums[first_index] < nums[i]:
             second_index = i
@@ -27,6 +27,7 @@ class Solution:
 
        #sorting the rest of array because we need next permutation only!
         nums[first_index+1:] = sorted(nums[first_index+1:])
+
 
         
  # link : https://leetcode.com/problems/next-permutation/submissions/
